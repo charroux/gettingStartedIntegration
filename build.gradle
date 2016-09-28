@@ -1,0 +1,15 @@
+apply plugin: 'java' 
+apply plugin: 'eclipse' 
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+compile 'org.springframework.integration:spring-integration-core:4.1.6.RELEASE'
+compile 'org.springframework.integration:spring-integration-file:4.1.6.RELEASE'
+
+compile group: 'log4j', name: 'log4j', version: '1.2.17'
+
+}
