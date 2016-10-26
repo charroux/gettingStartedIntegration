@@ -34,7 +34,7 @@
 	method="myMethod">
 	</int:service-activator>
 
-	<bean id="myServiceBean" class="myPackage.MyService"></bean>
+	<bean id="myServiceBean" class="myPackage.MyServiceToJSon"></bean>
 
 	<int:channel id="serviceActivatorsortie"></int:channel>
 	
