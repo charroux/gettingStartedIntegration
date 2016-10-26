@@ -15,16 +15,6 @@ fileContext.xml :
 
 	- output file adapter
 	
-fileContextWithService.xml
-
-	- input file adapter
-
-	- channel
-
-	- service activator (java program)
-
-	- output file adapter
-
 fileContextWithServiceAndStringConversion.xml
 
 	- input file adapter
