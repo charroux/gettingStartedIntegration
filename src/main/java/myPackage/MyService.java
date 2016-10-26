@@ -2,9 +2,9 @@ package myPackage;
 
 public class MyService {
 
-	public String myMethod(String s){
+	public MyClasse myMethod(String s){
 		System.out.println("Je suis myMethod de MyService. Je recois " + s + " que je retourne");
-		return s;
+		return new MyClasse(s, 5);
 	}
 
 }
