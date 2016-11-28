@@ -61,4 +61,4 @@ sqlDatabase.xml
 	
 	- service (java or javascript or web service)
 	
-	- logger
+	- data base (hsqldb, h2...)
