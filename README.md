@@ -38,6 +38,15 @@ fileContextWithServiceAndStringAndJSonConversion.xml
 	- service activator (java program)
 	
 	- json conversion
+
+javaScriptService.xml
+
+	- gateway
+	
+	- javascript
+	
+	- logger
+	
 	
 	- output file adapter
 	
