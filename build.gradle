@@ -7,9 +7,12 @@ repositories {
 
 dependencies {
 
-compile 'org.springframework.integration:spring-integration-core:4.1.6.RELEASE'
-compile 'org.springframework.integration:spring-integration-file:4.1.6.RELEASE'
+compile 'org.springframework.integration:spring-integration-core:4.2.4.RELEASE'
+compile 'org.springframework.integration:spring-integration-file:4.2.4.RELEASE'
+compile 'org.springframework.integration:spring-integration-http:4.2.4.RELEASE'
+compile 'org.springframework.integration:spring-integration-jdbc:4.2.4.RELEASE'
 compile 'org.springframework.integration:spring-integration-scripting:4.2.4.RELEASE'
+compile group: 'org.springframework.integration', name: 'spring-integration-ws', version: '4.2.4.RELEASE'
 
 compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.8.4'
 compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.4'
