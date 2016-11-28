@@ -38,8 +38,27 @@ fileContextWithServiceAndStringAndJSonConversion.xml
 	- service activator (java program)
 	
 	- json conversion
-	
-	- output file adapter
-	
 
+javaScriptService.xml
+
+	- gateway
 	
+	- javascript
+	
+	- logger
+	
+webServiceCalling.xml
+
+	-gateway
+	
+	- web service call
+	
+	- logger
+	
+sqlDatabase.xml
+
+	- gateway
+	
+	- service (java or javascript or web service)
+	
+	- data base (hsqldb, h2...)
