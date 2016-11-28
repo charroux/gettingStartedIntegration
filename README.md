@@ -47,8 +47,18 @@ javaScriptService.xml
 	
 	- logger
 	
-	
-	- output file adapter
-	
+webServiceCalling.xml
 
+	-gateway
 	
+	- web service call
+	
+	- logger
+	
+sqlDatabase.xml
+
+	- gateway
+	
+	- service (java or javascript or web service)
+	
+	- logger
