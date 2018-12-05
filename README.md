@@ -1,9 +1,9 @@
 # gettingStartedIntegration
 
-Download the project
+Download or clone the project
 
-Use the command: gradle build
-Use the command: gradle eclipse
+Use the command: gradlew build
+Use the command: gradlew eclipse
 
 Import the project into Eclipse
 
