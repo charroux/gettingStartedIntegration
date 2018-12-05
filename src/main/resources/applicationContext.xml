@@ -23,6 +23,6 @@
     
     <int-file:outbound-channel-adapter id="filesOut" channel="channelEntree"
     directory=".\dataOut"
-    delete-source-files="true"/>
+    delete-source-files="false"/>
        
 </beans>

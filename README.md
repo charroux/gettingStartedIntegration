@@ -5,7 +5,11 @@ Download the project
 Use the command: gradle build
 Use the command: gradle eclipse
 
-Import the project into Eclipse
+Import the project into Eclipse.
+
+Run the main as a Java project: https://github.com/charroux/gettingStartedIntegration/blob/master/src/main/java/test/Main.java
+
+XML configuration files are into: https://github.com/charroux/gettingStartedIntegration/tree/master/src/main/resources
 
 fileContext.xml :
 
