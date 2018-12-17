@@ -27,5 +27,6 @@ repositories {
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-integration')
 	compile 'org.springframework.integration:spring-integration-file:5.1.0.RELEASE'
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.7'
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
