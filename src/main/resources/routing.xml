@@ -21,7 +21,20 @@
     
     <int:channel id="mainChannel"></int:channel>
     
-    <int:logging-channel-adapter channel="mainChannel"/>
+    <int:recipient-list-router input-channel="mainChannel">
+    	<int:recipient channel="channelA" selector-expression="payload.amount &lt; 1000" />
+    	<int:recipient channel="channelB" selector-expression="payload.amount >= 1000" />
+	</int:recipient-list-router>
+    
+    <int:channel id="channelA"></int:channel>
+    
+    <int:service-activator input-channel="channelB" output-channel="serviceActivatorOutput" ref="serviceID" method="myService"/>
+    <bean id="serviceID" class="test.AccountService"/>
+    
+    <int:channel id="serviceActivatorOutput"></int:channel>
+    
+    <int:logging-channel-adapter id="logger1" channel="channelA"/>
+    <int:logging-channel-adapter id="logger2" channel="serviceActivatorOutput"/>
         
 </beans>
     
