@@ -12,7 +12,7 @@ Run the main as a Java project: https://github.com/charroux/gettingStartedIntegr
 
 XML configuration files are into: https://github.com/charroux/gettingStartedIntegration/tree/master/src/main/resources
 
-fileContext.xml :
+applicationContext.xml :
 
 	- input file adapter
 
@@ -20,7 +20,7 @@ fileContext.xml :
 
 	- output file adapter
 	
-fileContextWithServiceAndStringConversion.xml
+ServiceActivator.xml
 
 	- input file adapter
 
@@ -32,15 +32,23 @@ fileContextWithServiceAndStringConversion.xml
 
 	- output file adapter
 	
-fileContextWithServiceAndStringAndJSonConversion.xml
+routing.xml
 
 	- input file adapter
 	
-	- file to string transformer
+	- json to object transformer
 
 	- channel
 	
-	- service activator (java program)
+	- router:
+	
+		- service activator
+		
+		- channel
+	
+	- aggregator:
+	
+	- outbound file adapter
 	
 	- json conversion
 
