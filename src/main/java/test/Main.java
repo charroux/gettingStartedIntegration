@@ -8,8 +8,13 @@ public class Main {
 	public static void main(String[] args) {
 
 		//ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+<<<<<<< HEAD
 		//ApplicationContext ctx = new ClassPathXmlApplicationContext("serviceActivator.xml");
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("routing.xml");
+=======
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("serviceActivator.xml");
+
+>>>>>>> 72a11f58b979d7a8965fcab0759f24efddb86c07
 	}
 
 }
