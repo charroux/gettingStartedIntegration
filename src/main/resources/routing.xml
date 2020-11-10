@@ -37,7 +37,7 @@
     <int:channel id="filesOut1"></int:channel>
 
     <int-file:outbound-channel-adapter id="f1" channel="filesOut1"
-    directory="./dataOut"/>
+    directory="./dataOut/test1"/>
     
     <int:channel id="channel2"></int:channel>
     
@@ -46,7 +46,7 @@
     <int:channel id="filesOut2"></int:channel>
 
     <int-file:outbound-channel-adapter id="f2" channel="filesOut2"
-    directory="./dataOut"/>
+    directory="./dataOut/test2"/>
     
     
 </beans>
