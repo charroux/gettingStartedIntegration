@@ -20,7 +20,7 @@ applicationContext.xml :
 
 	- output file adapter
 	
-ServiceActivator.xml
+serviceActivator.xml
 
 	- input file adapter
 
@@ -72,6 +72,6 @@ sqlDatabase.xml
 
 	- gateway
 	
-	- service (java or javascript or web service)
-	
 	- data base (hsqldb, h2...)
+	
+	- logger
