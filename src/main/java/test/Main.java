@@ -28,7 +28,7 @@ public class Main {
 		myGateway.method("Salut !");
 		*/
 
-		/*
+
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("database.xml");
 
 		PersonService personService = ctx.getBean(PersonService.class);
@@ -38,7 +38,7 @@ public class Main {
 		person = personService.createPerson(person);
 
 		System.out.println(person);
-		*/
+
 
 	}
 
