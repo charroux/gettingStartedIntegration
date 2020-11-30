@@ -1,12 +1,14 @@
 # gettingStartedIntegration
 
+Compatibility: Java 11
+
 Download or clone the project
 
-Use the command: gradlew build
+Import this project as a Gradle project in Eclipse 
 
-Use the command: gradlew eclipse
+or 
 
-Import the project into Eclipse with File -> import -> general -> Existing project into woskspacce
+Open this project in Intellij
 
 Run the main as a Java project: https://github.com/charroux/gettingStartedIntegration/blob/master/src/main/java/test/Main.java
 
