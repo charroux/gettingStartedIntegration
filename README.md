@@ -64,6 +64,8 @@ javaScriptService.xml
 	
 webServiceCalling.xml
 
+Existing Web Service project : https://github.com/charroux/webServiceForSpringIntegration
+
 	-gateway
 	
 	- web service call
