@@ -16,8 +16,11 @@
         <jdbc:script location="classpath:setup-tables.sql"/>
     </jdbc:embedded-database>
 
-    ...
-    
+	<int:channel id="createPersonRequestChannel"/>
+
+
+	<int:gateway id="personService" service-interface="test.PersonService" default-request-channel="createPersonRequestChannel"/>
+
     <int-jdbc:outbound-gateway data-source="datasource"
                                request-channel="createPersonRequestChannel"
                                reply-channel="createPersonReplyChannel"
@@ -30,6 +33,7 @@
                                row-mapper="personResultMapper"
                                keys-generated="true"/>
 
+    <int:channel id="createPersonReplyChannel"/>
 
     <bean id="personResultMapper" class="test.PersonMapper"/>
 
@@ -49,6 +53,7 @@
         </property>
     </bean>
 
+    <int:logging-channel-adapter id="createPersonReplyChannel" level="INFO"/>
 
 </beans>
 

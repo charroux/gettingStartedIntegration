@@ -7,9 +7,17 @@
 		http://www.springframework.org/schema/integration https://www.springframework.org/schema/integration/spring-integration-5.1.xsd
 		http://www.springframework.org/schema/integration/http https://www.springframework.org/schema/integration/http/spring-integration-http-5.1.xsd">
 
-    ...
+    <int:gateway id="gateWayService" service-interface="test.MyGateway" default-request-channel="requestChannel"/>
 
-    <int-http:outbound-gateway .../>
+    <int:channel id="requestChannel"/>
+
+    <int-http:outbound-gateway request-channel="requestChannel"
+    						reply-channel="responseChannel"
+                            url="http://localhost:8181/"
+                            http-method="PUT"
+                            expected-response-type="java.lang.String"/>
+
                            
+    <int:logging-channel-adapter id="responseChannel" level="INFO"/>
 
 </beans>

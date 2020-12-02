@@ -21,12 +21,12 @@ public class Main {
 		myGateway.method("Salut !");
 		*/
 
-		/*
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("webServiceCalling.xml");
+
+		/*ApplicationContext ctx = new ClassPathXmlApplicationContext("webServiceCalling.xml");
 
 		MyGateway myGateway= (MyGateway)ctx.getBean("gateWayService");
-		myGateway.method("Salut !");
-		*/
+		myGateway.method("Salut !");*/
+
 
 
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("database.xml");
