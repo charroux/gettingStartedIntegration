@@ -10,7 +10,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		// ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+
 		// ApplicationContext ctx = new ClassPathXmlApplicationContext("serviceActivator.xml");
 		// ApplicationContext ctx = new ClassPathXmlApplicationContext("routing.xml");
 
@@ -29,7 +30,7 @@ public class Main {
 
 
 
-		ApplicationContext ctx = new ClassPathXmlApplicationContext("database.xml");
+		/*ApplicationContext ctx = new ClassPathXmlApplicationContext("database.xml");
 
 		PersonService personService = ctx.getBean(PersonService.class);
 		
@@ -37,7 +38,7 @@ public class Main {
 		person.setName("Tintin");
 		person = personService.createPerson(person);
 
-		System.out.println(person);
+		System.out.println(person);*/
 
 
 	}

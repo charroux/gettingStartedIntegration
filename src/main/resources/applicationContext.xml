@@ -12,16 +12,21 @@
     
     <int-file:inbound-channel-adapter 
 		channel="channelEntree" 
-    	directory=".\dataIn"
+    	directory="dataIn"
     	filename-pattern="*.txt">
     		<int:poller id="poller" fixed-delay="1000" />
     </int-file:inbound-channel-adapter>
 
+    <int:channel id="channelEntree"></int:channel>
+
     <int-file:file-to-string-transformer input-channel="channelEntree" output-channel="responseChannel"
                                          delete-files="false" charset="UTF-8"/>
 
-    <int:channel id="channelEntree"></int:channel>
 
-    <int:logging-channel-adapter id="responseChannel" level="INFO"/>
+    <int:channel id="responseChannel"></int:channel>
+
+    <int-file:outbound-channel-adapter channel="responseChannel" id="filesOut" directory="dataOut"/>
+
+
 
 </beans>
