@@ -9,8 +9,6 @@
            http://www.springframework.org/schema/integration/spring-integration-5.1.xsd
            http://www.springframework.org/schema/integration/file
            http://www.springframework.org/schema/integration/file/spring-integration-file-5.1.xsd">
-       
-       
     
     <int-file:inbound-channel-adapter 
 		channel="channelEntree" 
@@ -18,11 +16,12 @@
     	filename-pattern="*.txt">
     		<int:poller id="poller" fixed-delay="1000" />
     </int-file:inbound-channel-adapter>
-    
+
+    <int-file:file-to-string-transformer input-channel="channelEntree" output-channel="responseChannel"
+                                         delete-files="false" charset="UTF-8"/>
+
     <int:channel id="channelEntree"></int:channel>
-    
-    <int-file:outbound-channel-adapter id="filesOut" channel="channelEntree"
-    directory=".\dataOut"
-    delete-source-files="false"/>
-       
+
+    <int:logging-channel-adapter id="responseChannel" level="INFO"/>
+
 </beans>
