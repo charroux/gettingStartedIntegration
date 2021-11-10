@@ -19,9 +19,21 @@ applicationContext.xml :
 	- input file adapter
 
 	- channel
-
-	- output file adapter
 	
+	- logging channel
+
+filtering.xml :
+
+	- input file adapter
+
+	- channel
+	
+	- message filter 
+	
+	- adding headers
+
+	- logging channel
+		
 serviceActivator.xml
 
 	- input file adapter
