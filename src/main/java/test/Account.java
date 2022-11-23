@@ -29,4 +29,13 @@ public class Account {
     public void setAmount(int amount) {
         this.amount = amount;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "name='" + name + '\'' +
+                ", number=" + number +
+                ", amount=" + amount +
+                '}';
+    }
 }
