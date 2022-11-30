@@ -25,6 +25,6 @@
 
     <int:channel id="responseChannel"></int:channel>
 
-    <int:logging-channel-adapter id="responseChannel" log-full-message="true" level="INFO"/>
+    <int:logging-channel-adapter id="responseChannel" level="INFO"/>
 
 </beans>

@@ -25,10 +25,10 @@
 
     <int:channel id="responseChannel"></int:channel>
 
-    <int:filter input-channel="responseChannel" output-channel="outputChannel" expression="payload.equals('psg')"/>
+    <int:logging-channel-adapter id="responseChannel" level="INFO"/>
 
-    <int:channel id="outputChannel"></int:channel>
 
-    <int:logging-channel-adapter id="outputChannel" log-full-message="true" level="INFO"/>
+    <int:header-filter input-channel="inputChannel"
+                       output-channel="outputChannel" header-names="lastName, state"/>
 
 </beans>

@@ -13,23 +13,26 @@
     <int-file:inbound-channel-adapter
 		channel="channelEntree" 
     	directory="dataIn"
-    	filename-pattern="account.json">
+    	filename-pattern="*.txt">
     		<int:poller id="poller" fixed-delay="1000" />
     </int-file:inbound-channel-adapter>
 
-	<int:channel id="channelEntree"></int:channel>
+    <int:channel id="channelEntree"></int:channel>
 
-	<int:json-to-object-transformer input-channel="channelEntree" output-channel="mainChannel" type="test.Account"></int:json-to-object-transformer>
+    <int-file:file-to-string-transformer input-channel="channelEntree" output-channel="responseChannel"
+                                         delete-files="false" charset="UTF-8"/>
 
-	<int:channel id="mainChannel"></int:channel>
+    <int:channel id="responseChannel"></int:channel>
 
-	<int:service-activator id="exampleServiceActivator" input-channel="mainChannel"
-						   output-channel = "outChannel" method="buy">
-		<bean class="test.AccountService"/>
-	</int:service-activator>
+    <int:service-activator id="exampleServiceActivator" input-channel="responseChannel"
+                           output-channel = "outChannel" method="create">
+        <bean class="test.Account"/>
+    </int:service-activator>
 
-	<int:channel id="outChannel"></int:channel>
+    <int:channel id="outChannel"></int:channel>
 
-	<int:logging-channel-adapter id="outChannel" log-full-message="true" level="INFO"/>
+    <int-file:outbound-channel-adapter channel="outChannel" id="filesOut" directory="dataOut"/>
+
+
 
 </beans>
